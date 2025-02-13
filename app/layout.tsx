@@ -10,6 +10,7 @@ import { mainMenu, contentMenu } from "@/menu.config";
 import { Section, Container } from "@/components/craft";
 import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "@/site.config";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import Balancer from "react-wrap-balancer";
 import Logo from "@/public/logo.svg";
@@ -42,6 +43,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
+         <GoogleAnalytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
